@@ -1,7 +1,8 @@
-from flask import Flask, request
-import pyshorteners
-import pandas as pd
+import hashlib
 import os.path
+
+import pandas as pd
+from flask import Flask, request
 
 app = Flask(__name__)
 
@@ -9,8 +10,9 @@ app = Flask(__name__)
 @app.route('/', methods=['POST'])
 def url_shortener():
     original_url = request.form.get('url')
-    link = pyshorteners.Shortener()
-    shortened_url = link.tinyurl.short(original_url)
+
+    hashed_url = hashlib.sha1(original_url.encode("UTF-8")).hexdigest()
+    shortened_url = hashed_url[:10]
 
     update_url_data_file(original_url, shortened_url)
 
