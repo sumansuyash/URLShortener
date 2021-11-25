@@ -31,14 +31,14 @@ Then point your browser to [http://127.0.0.1:5000/](http://127.0.0.1:5000/).
 [virtualenvwrapper](https://virtualenvwrapper.readthedocs.io/en/latest/) and create a new environment.
 2. Run `pip install -r requirements.txt`.
 
-#### Configuration
+#### Configuration for Docker Image CI
 
-The following properties can be configured:
+The following properties must be configured in GitHub Secrets to build docker image and push to docker hub repository:
 
 | Name                    | Purpose                                                          | Default              |
 | ----------------------- | ---------------------------------------------------------------- | -------------------- |
-| `SECRET_USERNAME`       | A GitHub secret username to access Docker Hub.                   | `Docker-id`          |
-| `SECRET_PASSWORD`       | A GitHub secret password to access Docker Hub.                   | `Docker-password`    |
+| `DOCKER_USER`           | A GitHub secret username to access Docker Hub.                   | `Docker-id`          |
+| `DOCKER_PASSWORD`       | A GitHub secret password to access Docker Hub.                   | `Docker-password`    |
 
 #### Running
 
