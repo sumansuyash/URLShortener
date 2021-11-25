@@ -1,5 +1,3 @@
-# URL Shortener
-URL Shortener Project
 
 A simple URL shortener built with [Flask](http://flask.pocoo.org/) and [Pandas](https://pandas.pydata.org/)
 
