@@ -15,4 +15,4 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: Build the Docker image
-      run: docker build . --file Dockerfile --tag URLShortenerInfraCloud:$(date +%s)
+      run: docker build . --file Dockerfile --tag sumansuyash:251121
