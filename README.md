@@ -1,5 +1,5 @@
 
-A simple URL shortener built with [Flask](http://flask.pocoo.org/) and [Pandas](https://pandas.pydata.org/).
+A simple URL shortener built with [Flask](http://flask.pocoo.org/), [Pandas](https://pandas.pydata.org/) and [Docker](https://www.docker.com/) with Docker Image CI as GitHub workflow.
 
 ## Getting Started
 
