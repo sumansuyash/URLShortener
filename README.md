@@ -1,5 +1,5 @@
 
-A simple URL shortener built with [Flask](http://flask.pocoo.org/) and [Pandas](https://pandas.pydata.org/)
+A simple URL shortener built with [Flask](http://flask.pocoo.org/) and [Pandas](https://pandas.pydata.org/).
 
 ## Getting Started
 
@@ -17,6 +17,7 @@ A simple URL shortener built with [Flask](http://flask.pocoo.org/) and [Pandas](
 From your terminal/command prompt run:
 
 ```
+docker pull sumansuyash/myrepo1:latest
 docker-compose up
 ```
 
