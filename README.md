@@ -21,7 +21,10 @@ docker pull sumansuyash/myrepo1:latest
 docker run myrepo1:latest
 ```
 
-Then point your browser to [http://127.0.0.1:5000/](http://127.0.0.1:5000/).
+To validate - run below cURL command
+```
+curl POST 'http://127.0.0.1:5000/' --form 'url="http://web.whatsapp.com"'
+```
 
 ### Without Docker
 
@@ -48,8 +51,10 @@ From your terminal/command prompt run:
 ./main.py
 ```
 
-Then point your browser to [http://127.0.0.1:5000/](http://127.0.0.1:5000/).
-
+To validate - run below cURL command
+```
+curl POST 'http://127.0.0.1:5000/' --form 'url="http://web.whatsapp.com"'
+```
 ## Technology Used
 
 For those of you that are interested, the technology used in this project includes:
