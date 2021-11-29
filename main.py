@@ -13,13 +13,13 @@ def url_shortener():
     original_url = request.form.get('url')
     if is_url(original_url):
         hashed_url = hashlib.sha1(original_url.encode("UTF-8")).hexdigest()
-        shortened_url = "cut.io/" + hashed_url[:10]
+        shortened_url = "ic.io/" + hashed_url[:10]
 
         update_url_data_file(original_url, shortened_url)
 
         return shortened_url
     else:
-        return "Invalid URL"
+        return "Invalid URL \n(Expected URL format : http://www.abc.com)"
 
 
 def is_url(original_url):
