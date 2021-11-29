@@ -18,7 +18,7 @@ From your terminal/command prompt run:
 
 ```
 docker pull sumansuyash/myrepo1:latest
-docker run -p 5000:5000 -e FLASK_APP=main.py -e FLASK_RUN_HOST=0.0.0.0 sumansuyash/myrepo1
+docker run --name mycontainer -p 5000:5000 -e FLASK_APP=main.py -e FLASK_RUN_HOST=0.0.0.0 sumansuyash/myrepo1
 ```
 
 To validate - run below cURL command (The following command will make a POST API call to the flask application inside the docker container and returns a shortened URL as response)
