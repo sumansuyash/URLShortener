@@ -47,7 +47,7 @@ To validate - run below cURL command
 curl -X POST 'http://127.0.0.1:5000/' --form 'url="http://web.whatsapp.com"'
 ```
 
-#### Configuration for Docker Image CI (for GitHub workflow)
+## Configuration for Docker Image CI (for GitHub workflow)
 
 The following properties must be configured in GitHub Secrets to build docker image and push to docker hub repository:
 
@@ -63,3 +63,4 @@ For those of you that are interested, the technology used in this project includ
 * [Python 3.9](https://www.python.org/downloads/release/python-390/)
 * [Flask](http://flask.pocoo.org/) (Microframework)
 * [Docker](https://www.docker.com/)
+* [Pandas](https://pandas.pydata.org/)
