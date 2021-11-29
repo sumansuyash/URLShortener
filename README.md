@@ -18,7 +18,7 @@ From your terminal/command prompt run:
 
 ```
 docker pull sumansuyash/myrepo1:latest
-docker-compose up
+docker run myrepo1
 ```
 
 Then point your browser to [http://127.0.0.1:5000/](http://127.0.0.1:5000/).
