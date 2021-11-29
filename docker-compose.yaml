@@ -1,0 +1,10 @@
+services:
+  URLshortener:
+    container_name: mycontainer
+    environment:
+      FLASK_APP: main.py
+      FLASK_RUN_HOST: 0.0.0.0
+    image: sumansuyash/myrepo1
+    ports:
+      - 5000:5000
+version: '3.0'
