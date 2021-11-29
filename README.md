@@ -1,5 +1,5 @@
 
-A simple URL shortener built with [Flask](http://flask.pocoo.org/), [Pandas](https://pandas.pydata.org/) and [Docker](https://www.docker.com/) with Docker Image CI as GitHub workflow.
+A simple URL shortener built with [Flask](http://flask.pocoo.org/), [Pandas](https://pandas.pydata.org/) and [Docker](https://www.docker.com/). The CI pipeline, GitHub workflow uses Docker Image CI to generate the docker image and push it to Docker hub.
 
 ## Getting Started
 
@@ -21,20 +21,33 @@ docker pull sumansuyash/myrepo1:latest
 docker run myrepo1:latest
 ```
 
+To validate - run below cURL command (The following command will make a POST API call to the flask application inside the docker container and returns a shortened URL as response)
+```
+curl POST 'http://127.0.0.1:5000/' --form 'url="http://web.whatsapp.com"'
+```
+
+### Without Docker (Running the flask application locally without docker) (Requires python 3)
+
+#### Setup steps
+
+1. Clone the repository contents to a local folder.
+2. Install [virtualenv](https://pypi.org/project/virtualenv/) and create a new environment.
+2. Run `pip install -r requirements.txt` to install all the dependencies.
+
+#### Running
+
+From your terminal/command prompt run:
+
+```
+python main.py
+```
+
 To validate - run below cURL command
 ```
 curl POST 'http://127.0.0.1:5000/' --form 'url="http://web.whatsapp.com"'
 ```
 
-### Without Docker
-
-#### Installing Requirements
-
-1. (Optional) Install [virtualenv](https://pypi.org/project/virtualenv/) and
-[virtualenvwrapper](https://virtualenvwrapper.readthedocs.io/en/latest/) and create a new environment.
-2. Run `pip install -r requirements.txt`.
-
-#### Configuration for Docker Image CI
+#### Configuration for Docker Image CI (for GitHub workflow)
 
 The following properties must be configured in GitHub Secrets to build docker image and push to docker hub repository:
 
@@ -43,18 +56,6 @@ The following properties must be configured in GitHub Secrets to build docker im
 | `DOCKER_USER`           | A GitHub secret username to access Docker Hub.                   | `Docker-id`          |
 | `DOCKER_PASSWORD`       | A GitHub secret password to access Docker Hub.                   | `Docker-password`    |
 
-#### Running
-
-From your terminal/command prompt run:
-
-```
-./main.py
-```
-
-To validate - run below cURL command
-```
-curl POST 'http://127.0.0.1:5000/' --form 'url="http://web.whatsapp.com"'
-```
 ## Technology Used
 
 For those of you that are interested, the technology used in this project includes:
