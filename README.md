@@ -18,12 +18,12 @@ From your terminal/command prompt run:
 
 ```
 docker pull sumansuyash/myrepo1:latest
-docker run myrepo1:latest
+docker run -p 5000:5000 -e FLASK_APP=main.py -e FLASK_RUN_HOST=0.0.0.0 sumansuyash/myrepo1
 ```
 
 To validate - run below cURL command (The following command will make a POST API call to the flask application inside the docker container and returns a shortened URL as response)
 ```
-curl POST 'http://127.0.0.1:5000/' --form 'url="http://web.whatsapp.com"'
+curl -X POST 'http://127.0.0.1:5000/' --form 'url="http://web.whatsapp.com"'
 ```
 
 ### Without Docker (Running the flask application locally without docker) (Requires python 3)
@@ -44,7 +44,7 @@ python main.py
 
 To validate - run below cURL command
 ```
-curl POST 'http://127.0.0.1:5000/' --form 'url="http://web.whatsapp.com"'
+curl -X POST 'http://127.0.0.1:5000/' --form 'url="http://web.whatsapp.com"'
 ```
 
 #### Configuration for Docker Image CI (for GitHub workflow)
