@@ -23,7 +23,7 @@ docker run -p 5000:5000 -e FLASK_APP=main.py -e FLASK_RUN_HOST=0.0.0.0 sumansuya
 
 To validate - run below cURL command (The following command will make a POST API call to the flask application inside the docker container and returns a shortened URL as response)
 ```
-curl -X POST 'http://127.0.0.1:5000/' --form 'url="http://web.whatsapp.com"'
+curl -X POST 'http://127.0.0.1:5000/' --form 'url=http://web.whatsapp.com'
 ```
 
 ### Without Docker (Running the flask application locally without docker) (Requires python 3)
